@@ -10,4 +10,10 @@ export class ScheduleEntity {
 
    @Column({type: 'date'})
    arrivalTime: Date;
+
+   @Column('text')
+   departureLocation: string;
+
+   @Column('text')
+   arrivalLocation: string;
 }
