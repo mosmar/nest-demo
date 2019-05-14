@@ -1,6 +1,7 @@
 import { PassengerDTO } from './passenger.dto';
-import { Controller, Get, Post, Body, Param, Put, Delete } from '@nestjs/common';
+import { Controller, Get, Post, Body, Param, Put, Delete, UsePipes } from '@nestjs/common';
 import { PassengerService } from './passenger.service';
+import { ValidationPipe } from '../shared/validation.pipe';
 
 @Controller('passenger')
 export class PassengerController {
@@ -13,6 +14,7 @@ export class PassengerController {
    }
 
    @Post('schedule/:id')
+   @UsePipes(new ValidationPipe())
    createPassenger(@Param('id') id: string, @Body() data: PassengerDTO) {
        return this.passengerService.create(id, data);
    }

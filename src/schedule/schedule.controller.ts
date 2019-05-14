@@ -1,6 +1,7 @@
 import { ScheduleDTO } from './schedule.dto';
 import { ScheduleService } from './schedule.service';
-import { Controller, Get, Post, Put, Delete, Body, Param } from '@nestjs/common';
+import { Controller, Get, Post, Put, Delete, Body, Param, UsePipes } from '@nestjs/common';
+import { ValidationPipe } from '../shared/validation.pipe';
 
 @Controller('schedule')
 export class ScheduleController {
@@ -13,6 +14,7 @@ export class ScheduleController {
    }
 
    @Post()
+   @UsePipes(new ValidationPipe())
    createSchedule(@Body() data: ScheduleDTO) {
        return this.scheduleService.create(data);
    }
@@ -23,6 +25,7 @@ export class ScheduleController {
    }
 
    @Put(':id')
+   @UsePipes(new ValidationPipe())
    updateSchedule(@Param('id') id: string, @Body() data: Partial<ScheduleDTO>) {
        return this.scheduleService.update(id, data);
    }
