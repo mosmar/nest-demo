@@ -3,9 +3,10 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ScheduleModule } from './schedule/schedule.module';
+import { PassengerModule } from './passenger/passenger.module';
 
 @Module({
-  imports: [TypeOrmModule.forRoot(), ScheduleModule],
+  imports: [TypeOrmModule.forRoot(), ScheduleModule, PassengerModule],
   controllers: [AppController],
   providers: [AppService],
 })
