@@ -1,4 +1,5 @@
-import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn } from 'typeorm';
+import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, OneToMany } from 'typeorm';
+import { PassengerEntity } from 'passenger/passenger.entity';
 
 @Entity()
 export class ScheduleEntity {
@@ -16,4 +17,7 @@ export class ScheduleEntity {
 
    @Column('text')
    arrivalLocation: string;
+
+   @OneToMany(type => PassengerEntity, passenger => passenger.schedule, { cascade: true })
+   passengers: PassengerEntity[];
 }

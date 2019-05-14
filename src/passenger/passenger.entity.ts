@@ -1,4 +1,5 @@
-import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
+import { Entity, PrimaryGeneratedColumn, Column, ManyToOne } from 'typeorm';
+import { ScheduleEntity } from 'schedule/schedule.entity';
 
 @Entity()
 export class PassengerEntity {
@@ -13,4 +14,7 @@ export class PassengerEntity {
 
    @Column('text')
    email: string;
+
+   @ManyToOne(type => ScheduleEntity)
+   schedule: ScheduleEntity;
 }
