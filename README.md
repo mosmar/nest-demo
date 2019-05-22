@@ -86,4 +86,4 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
   - Under 'General' tab, fill in the 'Name' property
   - Under 'Connection' tab, fill in 'Host' and 'Password' fields, click Save.
   - In browser navigation pane (upper-left-hand corner), right-click Servers and click refresh, you should see you local Postgres server
-  - Expand localhost and right-click databases. Choose Create --> database. Name the database 'Demo'. Click Save
+  - Expand localhost and right-click databases. Choose Create --> database. Name the database 'demo'. Click Save
