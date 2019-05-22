@@ -77,3 +77,13 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
   Nest is [MIT licensed](LICENSE).
+  
+  ---------------------------------------------------------------------------------------------------------------------------
+  ## Postgres Installation & Setup
+  - Go to https://www.postgresql.org/download/, download, and install Postgres version 10.X for you prefered OS. Note: The database password must match the password in src/typeorm.json
+  - Go to https://www.pgadmin.org/download/ and install pgAdmin4
+  - Run pgAdmin4, a browser window will open. Click 'Add New Server'
+  - Under 'General' tab, fill in the 'Name' property
+  - Under 'Connection' tab, fill in 'Host' and 'Password' fields, click Save.
+  - In browser navigation pane (upper-left-hand corner), right-click Servers and click refresh, you should see you local Postgres server
+  - Expand localhost and right-click databases. Choose Create --> database. Name the database 'Demo'. Click Save
