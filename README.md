@@ -84,6 +84,8 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
   - Go to https://www.pgadmin.org/download/ and install pgAdmin4
   - Run pgAdmin4, a browser window will open. Click 'Add New Server'
   - Under 'General' tab, fill in the 'Name' property
+  ![alt text](https://github.com/mosmar/nest-demo/blob/development/images/connect_server.png)
   - Under 'Connection' tab, fill in 'Host' and 'Password' fields, click Save.
   - In browser navigation pane (upper-left-hand corner), right-click Servers and click refresh, you should see you local Postgres server
   - Expand localhost and right-click databases. Choose Create --> database. Name the database 'demo'. Click Save
+  ![alt text](https://github.com/mosmar/nest-demo/blob/development/images/create_database.png)
