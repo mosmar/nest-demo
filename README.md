@@ -89,3 +89,20 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
   - In browser navigation pane (upper-left-hand corner), right-click Servers and click refresh, you should see you local Postgres server
   - Expand localhost and right-click databases. Choose Create --> database. Name the database 'demo'. Click Save
   ![alt text](https://github.com/mosmar/nest-demo/blob/development/images/create_database.png)
+  
+  
+  ### Postman Examples
+  - Create new schedule entry
+  ```
+  curl -X POST \
+  http://localhost:3000/schedule/ \
+  -H 'Content-Type: application/json' \
+  -H 'Postman-Token: 04d9637d-7c95-4e5c-9099-35c8acc7589a,2b9fd1e3-5633-42a7-b441-9309b34f51ba' \
+  -H 'cache-control: no-cache,no-cache' \
+  -d '{
+	"arrivalTime":"2016-05-19T12:00:00",
+	"departureTime":"2016-05-07T12:00:00",
+	"arrivalLocation":"Orlando",
+	"departureLocation":"miami"
+}'
+  ```
